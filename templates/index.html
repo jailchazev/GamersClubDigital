@@ -322,23 +322,65 @@
                 align-items: center;
             }
         }
+
+        <style>
+    .logo-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 2rem;
+        margin-top: -8px; /* Ajusta para alinear con el menú */
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0;
+    }
+
+    .whatsapp-btn {
+        background: linear-gradient(135deg, #10b981, #3b82f6);
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-in-out;
+        border: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
+
+    .whatsapp-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+</style>
+
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital" style="height: 50px; margin: 0; padding: 0;">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital" style="height: 40px; vertical-align: middle;">
             </div>
-                <nav>
-                    <a href="#inicio">Inicio</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#planes">Planes</a>
-                    <a href="#contacto">Contacto</a>
-                    </nav>
-                        <a href="https://wa.me/51981558445?text=Hola,%20vi%20su%20web%20GamersClubDigital%20y%20estoy%20interesado%20en%20una%20p%C3%A1gina%20web%20o%20app%20para%20mi%20negocio.%20%C2%BFPodemos%20hablar?" target="_blank" class="whatsapp-btn">WhatsApp</a>
-            </div>
+        
+            <!-- Menú -->
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#planes">Planes</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        
+            <!-- Botón WhatsApp -->
+            <a href="https://wa.me/51981558445?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20desarrollo%20web%20y%20apps" target="_blank" class="whatsapp-btn">WhatsApp</a>
+        </div>
         </div>
     </header>
 
