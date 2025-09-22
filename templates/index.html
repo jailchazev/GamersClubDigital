@@ -357,9 +357,25 @@
         transform: translateY(-3px);
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
-</style>
 
-    </style>
+    @media (max-width: 768px) {
+    .logo-container img {
+        height: 30px;
+    }
+}
+</style>
+<style>
+    /* Espacio para evitar que el contenido se superponga al header */
+    .hero {
+        padding-top: 80px; /* Ajusta según la altura del header */
+        margin-top: 0;
+    }
+
+    /* Asegura que el header tenga una altura fija */
+    header {
+        height: 80px; /* Ajusta si el logo es más alto */
+    }
+</style>
 </head>
 <body>
     <!-- Header -->
