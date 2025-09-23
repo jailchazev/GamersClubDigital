@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
@@ -7,6 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+# Ruta para servir el sitemap.xml
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('.', 'sitemap.xml')
