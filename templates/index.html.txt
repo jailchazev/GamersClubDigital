@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Club Digital | Desarrollo Web y Apps para Gamers y PYMES</title>
-    <meta name="description" content="Creamos páginas web y apps móviles profesionales para gamers, streamers y pequeñas empresas. Precios accesibles, soporte 24/7 y resultados garantizados.">
-
+<meta name="description" content="Creamos páginas web y apps móviles profesionales para gamers, streamers y pequeñas empresas. Precios accesibles, soporte 24/7 y resultados garantizados.">
     <style>
         :root {
             --gradient-primary: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -36,7 +35,7 @@
             padding: 0 20px;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER REDISEÑADO ===== */
         header {
             background: white;
             box-shadow: var(--shadow);
@@ -58,21 +57,8 @@
             margin: 0 auto;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
         .logo-container img {
             height: 40px;
-            margin-right: 10px;
-        }
-
-        .logo-container span {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #365c92;
-            vertical-align: middle;
         }
 
         .whatsapp-btn {
@@ -120,7 +106,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 10rem 0 5rem;
+            padding: 10rem 0 5rem; /* Ajustado para header */
             text-align: center;
         }
 
@@ -354,23 +340,20 @@
         }
     </style>
 
-    <!-- ✅ ETIQUETA DE VERIFICACIÓN DE GOOGLE (CORRECTA) -->
-    <meta name="google-site-verification" content="yi5BO103ST9PgEqSF8pPADeOMc-06B-MTxgzioXylxw" />
+<!-- Pega la etiqueta de verificación aquí -->
+<meta name="google-site-verification" content="yi5BO103ST9PgEqSF8pPADeOMc-06B-MTxgzioXylxw" />
+
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="header-top">
-            <!-- Logo + Texto -->
-            <div class="logo-container">
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital">
-                <span>Gamers Club Digital</span>
-            </div>
-       
-            <!-- Botón WhatsApp -->
-        <a href="https://wa.me/51981558445?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20desarrollo%20web%20y%20apps" target="_blank" class="whatsapp-btn">WhatsApp</a>
+        <!-- Logo + Texto -->
+<div class="logo-container">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+    <span style="font-size: 1.5rem; font-weight: 700; color: #365c92; vertical-align: middle;">Gamers Club Digital</span>
+</div>
+            
         </div>
-
         <!-- Menú (centrado, debajo) -->
         <nav class="main-nav">
             <a href="#inicio">Inicio</a>
@@ -529,7 +512,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,
+                        top: targetElement.offsetTop - 100, // Ajustado para header más grande
                         behavior: 'smooth'
                     });
                 }
