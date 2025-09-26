@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Club Digital | Desarrollo Web y Apps para Gamers y PYMES</title>
-<meta name="description" content="Creamos páginas web y apps móviles profesionales para gamers, streamers y pequeñas empresas. Precios accesibles, soporte 24/7 y resultados garantizados.">
+    <meta name="description" content="Creamos páginas web y apps móviles profesionales para gamers, streamers y pequeñas empresas. Precios accesibles, soporte 24/7 y resultados garantizados.">
+
     <style>
         :root {
             --gradient-primary: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -35,7 +36,7 @@
             padding: 0 20px;
         }
 
-        /* ===== HEADER REDISEÑADO ===== */
+        /* ===== HEADER ===== */
         header {
             background: white;
             box-shadow: var(--shadow);
@@ -57,8 +58,21 @@
             margin: 0 auto;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
         .logo-container img {
             height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #365c92;
+            vertical-align: middle;
         }
 
         .whatsapp-btn {
@@ -106,7 +120,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 10rem 0 5rem; /* Ajustado para header */
+            padding: 10rem 0 5rem;
             text-align: center;
         }
 
@@ -190,6 +204,8 @@
         }
 
         .service-card {
+            display: flex;
+            flex-direction: column;
             background: white;
             padding: 2rem;
             border-radius: 16px;
@@ -200,6 +216,17 @@
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+        }
+
+        .service-card .service-content {
+            flex-grow: 1;
+        }
+
+        .service-card .service-button {
+            margin-top: auto; /* Empuja el botón hacia abajo */
+            width: 100%;
+            text-align: center;
+            justify-content: center;
         }
 
         .service-icon {
@@ -340,20 +367,34 @@
         }
     </style>
 
-<!-- Pega la etiqueta de verificación aquí -->
-<meta name="google-site-verification" content="yi5BO103ST9PgEqSF8pPADeOMc-06B-MTxgzioXylxw" />
+    <!-- ✅ ETIQUETA DE VERIFICACIÓN DE GOOGLE (CORRECTA) -->
+    <meta name="google-site-verification" content="yi5BO103ST9PgEqSF8pPADeOMc-06B-MTxgzioXylxw" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0B1PN0DJ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0B1PN0DJ6');
+</script>
 
 </head>
 <body>
     <!-- Header -->
     <header>
-        <!-- Logo + Texto -->
-<div class="logo-container">
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital" style="height: 40px; vertical-align: middle; margin-right: 10px;">
-    <span style="font-size: 1.5rem; font-weight: 700; color: #365c92; vertical-align: middle;">Gamers Club Digital</span>
-</div>
-            
+        <div class="header-top">
+            <!-- Logo + Texto -->
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="GamersClubDigital">
+                <span>Gamers Club Digital</span>
+            </div>
+       
+            <!-- Botón WhatsApp -->
+        <a href="https://wa.me/51981558445?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20desarrollo%20web%20y%20apps" target="_blank" class="whatsapp-btn">WhatsApp</a>
         </div>
+
         <!-- Menú (centrado, debajo) -->
         <nav class="main-nav">
             <a href="#inicio">Inicio</a>
@@ -366,7 +407,7 @@
     <!-- Hero -->
     <section id="inicio" class="hero">
         <div class="container">
-            <h1>Soluciones Web y Apps para tu <span>Negocio, Gamers, Streamers y MYPES</span></h1>
+            <h1>Soluciones Web y Apps para tu <span>Negocio. Gamers, Streamers y MYPES</span></h1>
             <p>Impulsa tu emprendimiento o PYME con páginas web profesionales y aplicaciones móviles diseñadas específicamente para tus necesidades. Modernas, funcionales y con un ROI comprobado.</p>
             <div class="hero-buttons">
                 <a href="#planes" class="btn-primary">Ver Planes</a>
@@ -433,25 +474,43 @@
             <p class="section-subtitle">Elige el plan que mejor se adapte a las necesidades de tu emprendimiento o PYME. Todos incluyen soporte y actualizaciones.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Básico</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: #2563eb; margin: 1rem 0;">$149</div>
-                    <p style="margin-bottom: 1.5rem;">Sitio web profesional + Hosting 1 año</p>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Básico - Landing Page</h3>
+                    <div style="font-size: 2rem; font-weight: 800; color: #2563eb; margin: 1rem 0;">S/200</div>
+                    <p style="margin-bottom: 1.5rem;">Platilla original PRO con licencia.</p>
+                    <p style="margin-bottom: 1.5rem;">Instalacioón de plugins.</p>
+                    <p style="margin-bottom: 1.5rem;">Instalación de CMS WordPress.</p>
+                    <p style="margin-bottom: 1.5rem;">Diseño de portada con llamada a la acción. Más información al WhatsApp</p>
                     <a href="https://wa.me/51981558445?text=Hola,%20quiero%20contratar%20el%20plan%20Básico%20para%20la%20Página%20web%20de%20mi%20negocio.%20Me%20pueden%20ayudar%20a%20empezar?" target="_blank" class="whatsapp-btn" style="width: 100%; text-align: center; justify-content: center;">Contratar Plan</a>
                 </div>
 
                 <div class="service-card" style="transform: scale(1.05); border: 2px solid #7c3aed;">
                     <div style="background: var(--gradient-primary); color: white; padding: 0.5rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem;">★ Más Popular</div>
-                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Profesional</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: #7c3aed; margin: 1rem 0;">$499</div>
-                    <p style="margin-bottom: 1.5rem;">Web + Tienda Online + Pasarelas de pago</p>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Profesional - Web Informativa</h3>
+                    <div style="font-size: 2rem; font-weight: 800; color: #7c3aed; margin: 1rem 0;">S/350</div>
+                    <p style="margin-bottom: 1.5rem;">Instalación de CMS WordPress.</p>
+                    <p style="margin-bottom: 1.5rem;">Diseño e información	de la portada.</p>
+                    <p style="margin-bottom: 1.5rem;">Página principal 3 sliders de imagenes.</p>
+                    <p style="margin-bottom: 1.5rem;">Publicación de hasta 10 servicios. Más información al WhatsApp</p>
                     <a href="https://wa.me/51981558445?text=Hola,%20quiero%20contratar%20el%20plan%20Profesional%20(Web%20+%20Tienda%20Online).%20Me%20dan%20más%20detalles?" target="_blank" class="whatsapp-btn" style="width: 100%; text-align: center; justify-content: center; background: var(--gradient-secondary);">Contratar Plan</a>
                 </div>
 
                 <div class="service-card">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Premium</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: #10b981; margin: 1rem 0;">$999</div>
-                    <p style="margin-bottom: 1.5rem;">Web + Tienda + App Móvil + Soporte 24/7</p>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Premium - Web + Tienda Virtual + Soporte 24/7</h3>
+                    <div style="font-size: 2rem; font-weight: 800; color: #10b981; margin: 1rem 0;">S/550</div>
+                    <p style="margin-bottom: 1.5rem;">Plantilla original PRO con licencia.</p>
+                    <p style="margin-bottom: 1.5rem;">Plataforma WooCommerce.</p>
+                    <p style="margin-bottom: 1.5rem;">Formulario de contáctenos enlazado a su correo corporativo</p>
+                    <p style="margin-bottom: 1.5rem;">Enlaces de WhatsApp y Redes Sociales. Más información al WhatsApp</p>
                     <a href="https://wa.me/51981558445?text=Hola,%20quiero%20el%20plan%20Premium%20con%20App%20Móvil%20incluida.%20Pueden%20ayudarme%20a%20empezar%20hoy?" target="_blank" class="whatsapp-btn" style="width: 100%; text-align: center; justify-content: center; background: var(--gradient-success);">Contratar Plan</a>
+                </div>
+
+                <div class="service-card">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Adicionales</h3>
+                    <div style="font-size: 2rem; font-weight: 800; color: #2563eb; margin: 1rem 0;"></div>
+                    <p style="margin-bottom: 1.5rem;">Diseño de logotipo S/80.</p>
+                    <p style="margin-bottom: 1.5rem;">Banner publicitario para Redes Sociales S/50.</p>
+                    <p style="margin-bottom: 1.5rem;">Configuración de IziPay con tarjeta de crédito y débito S/50.</p>
+                    <a href="https://wa.me/51981558445?text=Hola,%20quiero%20algunos%20servicios%20adicionales%20Me%20pueden%20ayudar?" target="_blank" class="whatsapp-btn" style="width: 100%; text-align: center; justify-content: center;">Contratar Adicionales</a>
                 </div>
             </div>
         </div>
@@ -512,7 +571,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100, // Ajustado para header más grande
+                        top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
                 }
